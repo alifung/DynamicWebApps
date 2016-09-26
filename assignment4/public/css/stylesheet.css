@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'gothamLight';
+    src: url('../../../../font/gothamlight-webfont.woff') format('woff');
+    }
+body {
+    padding: 20px;
+    padding: 20px;
+    font-family: 'gothamLight';
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    background-color: #2b2a2a;
+    color: #c7f9e6;
+}
+
+#search-form, .form-control {
+    margin-bottom: 20px;
+}
+
+.coverart {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: coverart;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.coverart:hover {
+    opacity: 0.5;
+
+}
+
+.coverart.playing {
+    opacity: 0.4;
+}
