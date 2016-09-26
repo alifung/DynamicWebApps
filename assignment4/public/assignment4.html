@@ -3,28 +3,14 @@
 <head>
 	<title></title>
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/handlebars-v4.0.5.js"></script>
+<script src = ../index.js</script>
 </head>
 <body>
 <h1>ALI FUNG</h1>
 <h2>Dynamic Web - FALL 2016 <br> 
 <hr>
-Type your current mood to get related playlists:
 </h2>
-<div class="container">
-<form id="search-form">
-        <input type="text" id="query" value="" class="form-control" />
-        <input type="submit" id="search" value="GO!" />
-    </form> 
-    <div id="results"></div> 
-</div>
-<script id="results-template" type="text/x-handlebars-template">
-    {{#each playlists.items}}
-    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="coverart"></div>
-    {{/each}}
-</script>
-<script id = "playlists" src="scripts/playlist.js">
+
 
 </script>
 
