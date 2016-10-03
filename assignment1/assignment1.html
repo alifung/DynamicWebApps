@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	#click-me {
+	width: 100px;
+	height: 100px;
+	background: #f1c6b7;
+	border-radius: 50%;
+	}
+
+	@font-face {
+    font-family: 'gothamLight';
+    src: url('../../font/gothamlight-webfont.woff') format('woff');
+
+	}
+body, p {
+	font-family: 'gothamLight';
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 100px;
+	background-color: #2b2a2a;
+	color: #c7f9e6;
+}
+</style>
+<body onload="return getColors"> 
+<h1>ALI FUNG</h1>
+<h2>Dynamic Web - FALL 2016 <br> 
+<hr>
+Assignment 1
+</h2>
+<img src="all.gif" alt="You can call me Al (not really) height = "100"> <!--Found on Giphy.com, original source = http://theredback.tumblr.com/post/119316379435/paul-simon-you-can-call-me-al -->
+<br>
+<br>
+<button id="click-me" onclick="myFunction()">Click Me (but only if you want to)</button>
+
+<script>
+
+function myFunction() {
+document.getElementById("click-me").style.backgroundColor = "#c7f9e6";
+}
+
+attempt part 2: 
+function getColors() { //function name
+                var color = '#'; // hexadecimal starting symbol
+                var letters = ['005500','ffe000','66ff00','000bef','fff230','00fa4f','ff34ff','f34120']; //Set your colors here
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('click-me').style.background = color; // Setting the random color on your div element.}
+</script>
+
+
+</body>
+
+</html>

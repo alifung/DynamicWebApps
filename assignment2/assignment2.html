@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+</head>
+</style>
+<body>
+<h1>ALI FUNG</h1>
+<h2>Dynamic Web - FALL 2016 <br> 
+<hr>
+Assignment 2
+</h2>
+<div id="displayit"></div">
+<script>
+
+
+//is this supposed to be in a separate .txt file? Can I read it right off of the website or do I have to go through this array?
+var url = "http://api.sunrise-sunset.org/json?lat=" + "lat" + "long"
+var locations = [
+{
+	"name": "Sunrise, Sunset for MetroTech",
+	"url": "http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-73.9883461"
+	"lat": 36.7201600,
+	"long": 73.9883461,
+	"sunrise": "10:38:19 AM",
+	"sunset": "11:03:53 PM",
+	"solar_noon": "4:51:06 PM",
+	"day_length": "12:25:34",
+	"civil_twilight_begin": "10:12:27 AM",
+	"civil_twilight_end": "11:29:45 PM",
+	"nautical_twilight_begin": "9:42:00 AM",
+	"nautical_twilight_end": "12:00:12 AM",
+	"astronomical_twilight_begin": "9:10:56 AM",
+	"astronomical_twilight_end": "12:31:15 AM"
+},
+{
+	"display": "Sunrise, Sunset for Washington Square Park",
+	"url": "http://api.sunrise-sunset.org/json?lat=40.7303916&lng=-73.9984571,16.57"
+	"name": "Sunrise, Sunset for Washington Square Park"
+	"lat": 40.7303916,
+	"long": 73.9984571,
+	"sunrise": "10:36:47 AM",
+	"sunset": "11:05:29 PM",
+	"solar_noon": "4:51:08 PM",
+	"day_length": "12:28:42",
+	"civil_twilight_begin": "10:09:24 AM",
+	"civil_twilight_end": "11:32:53 PM",
+	"nautical_twilight_begin": "9:37:02 AM",
+	"nautical_twilight_end": "12:05:14 AM",
+	"astronomical_twilight_begin": "9:03:50 AM",
+	"astronomical_twilight_end": "12:38:27 AM"
+},
+]
+
+
+
+document.write('<div>' + locations[0].name + '</div>');
+document.write('<div>' + locations[1].sunrise + '</div>');
+
+for (var i = 0; i < locations.length; i++) {
+            document.write(locations[i].name + ' ');
+        }
+document.write('</div>');
+
+
+
+//can I get in? 
+var xmlhttp = new XMLHttpRequest();
+//xhl or xhr?? what is the difference?
+//var url = "http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&callback=callitback";
+var url = "http://api.sunrise-sunset.org/json?lat=" + "lat" + "long";
+
+
+//to check if I'm authenticated? I guess this is the AJAX STUFF
+//.onload or .onreadystatechange?? 
+if (xhr.status === 200)
+xmlhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var myArr = JSON.parse(this.responseText); //proccess response
+		myFunction(myArr);
+	}
+};
+//if they say yes, let me in!
+xmlhttp.open("GET", "url", true);
+xmlhttp.send(); //send request to GET
+
+//DISPLAY THE INFO ON THE PAGE
+document.getElementbyId("displayit").innerHTML = "name, sunrise, sunset";
+
+
+
+
+
+//RANDOM THINGS I WAS ATTEMPTING:
+//go through data and display what is found... is this specific to my data? It seems kind of far-fetched
+/*function myFunction(arr) {
+	var out = "";
+	for(var i = 0; i < arr.length; i++) {
+		out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a></br>';
+	}
+	document.getElementById("displayit").innerHTML = out;
+}
+
+
+//document.getElementbyID(id01).innerHTML = results.sunrise;
+/*riseset.open("GET," "http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&callback=callitback/", false);
+
+
+//getJSON("http://api.sunrise-sunset.org/json")
+
+/*function callitback() {
+	var sunrise = 
+	document.getElementById("callingitback").innerHTML = 
+	var object = 
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
