@@ -1,0 +1,25 @@
+<script id="images-template" type="text/x-handlebars-template">
+	{{each dishes.items}}
+	<div style="background-image:url({{image}})" id="foodimages">
+	<h2>This dish can be found at {{location}}, NYC</h2> 
+	</div>
+	{{/each}}
+
+// the "context"? 
+var myData = {
+	"dishes"
+		[name: '1'],
+		[imageURL:'images/1.png'],
+		[location: "Brother Jimmy's"],
+		{tag: 'sandwich', 'macncheese'}.
+
+		[name: '2'],
+		[imageURL:'images/2.png'],
+		[location: 'Blue Ribbon Fried Chicken'],
+		[tag: 'sandwich', 'italian'].
+}
+</script>
+<script> //compile info from handlebars?
+    var templateSource = document.getElementbyId('images-template').innerHTML,
+	template = Handlebars.compile(templateSource),
+</script> 
